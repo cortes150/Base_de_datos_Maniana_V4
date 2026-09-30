@@ -18,4 +18,4 @@ git commit -m "primer commit en mi nueva rama"
 Envía la rama por primera vez al servidor remoto (como GitHub o GitLab) vinculándola con -u:
 bash
 
-git push -u origin nombre-de-tu-rama
+RR
