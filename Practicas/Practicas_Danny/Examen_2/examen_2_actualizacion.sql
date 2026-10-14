@@ -40,9 +40,8 @@ foreign key (id_categoria) references categoria (id_categoria)
 alter table proyecto add column observaciones varchar(500);
 alter table proyecto modify titulo varchar(250);
 alter table proyecto add column categoria varchar(50);
-
-
-
+alter table proyecto rename column tema to nombre_tema;
+alter table proyecto add constraint pk_proyecto primary key (id_proyecto);
 
 create table jurado (
 id_jurado int auto_increment primary key,
@@ -52,6 +51,7 @@ telefono int,
 especialidad varchar(80)
 );
 alter table jurado drop especialidad;
+alter table jurado add constraint pk_jurado primary key(id_jurado);
 
 create table participacion(
 id_participacion int auto_increment primary key,
@@ -61,8 +61,8 @@ id_estudiante int
 alter table participacion drop id_participacion;
 alter table participacion add primary key(id_proyecto ,id_estudiante);
 alter table participacion add constraint fk_participacion_proyecto foreign key(id_proyecto) references proyecto (id_proyecto);
+alter table participacion add constraint fk_participacion_estudiante foreign key(id_estudiante) references estudiante(id_estudiante);
 alter table participacion drop fk_participacion_estudiante;
-
 
 create table evaluacion(
 id_evaluacion int auto_increment primary key,
@@ -78,4 +78,5 @@ foreign key (id_jurado) references jurado (id_jurado),
 constraint fk_evaluacion_proyecto
 foreign key (id_proyecto) references proyecto (id_proyecto)
 );
+alter table evaluacion add constraint fk_evaluacion_jurado foreign key (id_jurado) references jurado(id_jurado);
 alter table evaluacion add constraint chk_evaluacion_puntaje check (puntaje >=0 && puntaje <= 100);
