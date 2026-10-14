@@ -63,7 +63,7 @@ alter table jurado drop column especialidad;
 ALTER TABLE materia add COLUMN id_materia_ INT;
 ALTER TABLE materia add CONSTRAINT PRIMARY KEY(id_materia_);
 -- E 14
-
+--a
 -- E 15
 
 -- E 16
