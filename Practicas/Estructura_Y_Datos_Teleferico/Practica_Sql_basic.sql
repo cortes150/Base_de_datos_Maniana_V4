@@ -1,0 +1,29 @@
+-- Práctica SQL — Base de Datos MiTelefericoDB
+-- Objetivo: practicar consultas SQL en MySQL utilizando las tablas y los datos de la base de datos MiTelefericoDB.
+-- Instrucciones: escribe una consulta SQL para resolver cada enunciado. No modifiques la estructura de las tablas. Trabaja únicamente con consultas de selección y funciones de agregación.
+-- A. SELECT, selección de columnas y DISTINCT
+-- 1. Mostrar todos los datos de los usuarios registrados en el sistema.
+-- 2. Mostrar únicamente el nombre, correo electrónico y teléfono de todos los usuarios.
+-- 3. Mostrar las ciudades diferentes en las que residen los usuarios, evitando que una ciudad aparezca repetida.
+-- B. WHERE, operadores de comparación, AND, OR y NOT
+-- 4. Mostrar los usuarios que sean pasajeros y residan en la ciudad de La Paz.
+-- 5. Mostrar las tarjetas cuyo saldo sea mayor a 30 Bs.
+-- 6. Mostrar las tarjetas cuyo saldo sea mayor o igual a 20 Bs y menor o igual a 40 Bs.
+-- 7. Mostrar los usuarios que residan en La Paz o en El Alto.
+-- 8. Mostrar los usuarios que no tengan el tipo de usuario pasajero.
+-- C. LIKE, IN, BETWEEN e IS NULL
+-- 9. Mostrar los usuarios cuyos nombres comiencen con la letra M.
+-- 10. Mostrar los usuarios cuyos correos electrónicos terminen en gmail.com.
+-- 11. Mostrar los usuarios que residan en La Paz o El Alto utilizando el operador IN.
+-- 12. Mostrar las tarjetas cuyo saldo esté entre 25 y 50 Bs, incluidos ambos valores.
+-- 13. Mostrar los boletos que no tengan asignado un identificador de pago (id_pago).
+-- D. ORDER BY y LIMIT
+-- 14. Mostrar todos los usuarios ordenados alfabéticamente por nombre, de la A a la Z.
+-- 15. Mostrar las cinco tarjetas con los saldos más altos, ordenadas de mayor a menor.
+-- E. Funciones de agregación: COUNT, SUM, AVG, MAX y MIN
+-- 16. Mostrar la cantidad total de usuarios registrados en el sistema.
+-- 17. Calcular el saldo total almacenado en todas las tarjetas registradas.
+-- 18. Calcular el saldo promedio de las tarjetas.
+-- 19. Mostrar el saldo máximo y el saldo mínimo entre todas las tarjetas.
+-- F. GROUP BY y HAVING
+-- 20. Mostrar las ciudades que tengan más de cinco usuarios registrados, indicando el nombre de la ciudad y la cantidad de usuarios correspondiente. Ordenar el resultado de mayor a menor cantidad.
