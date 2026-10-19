@@ -280,11 +280,11 @@ SELECT * FROM usuarios WHERE NOT tipo_usuario = 'pasajero';
 
 -- C. LIKE, IN, BETWEEN e IS NULL
 -- 9
-SELECT * FROM usuarios WHERE nombre LIKE 'M%';
+SELECT nombre FROM usuarios WHERE nombre LIKE 'la%';
 -- 10
-SELECT * FROM usuarios WHERE email LIKE '%gmail.com';
+SELECT email FROM usuarios WHERE email LIKE '%gmail.com';
 -- 11
-SELECT * FROM usuarios WHERE ciudad IN ('La Paz', 'El Alto');
+SELECT ciudad FROM usuarios WHERE ciudad IN ('La Paz', 'El Alto');
 -- 12
 SELECT * FROM tarjetas WHERE saldo BETWEEN 25 AND 50;
 -- 13
@@ -308,8 +308,4 @@ SELECT MAX(saldo) AS saldo_maximo, MIN(saldo) AS saldo_minimo FROM tarjetas;
 
 -- F. GROUP BY y HAVING
 -- 20
-SELECT ciudad, COUNT(*) AS cantidad_usuarios
-FROM usuarios
-GROUP BY ciudad
-HAVING COUNT(*) > 5
-ORDER BY cantidad_usuarios DESC;
+SELECT ciudad, COUNT(*) AS cantidad_usuarios FROM usuarios GROUP BY ciudad HAVING COUNT(*) > 5 ORDER BY cantidad_usuarios DESC;
